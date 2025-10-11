@@ -1,3 +1,4 @@
+
 export async function onRequestGet(context) {
 
     let appid = await db.get(`sys_appid`, { type: "text" })

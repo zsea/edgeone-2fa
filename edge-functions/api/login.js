@@ -43,7 +43,8 @@ export async function onRequestPost(context) {
             }
         });
     }
-    return new Response(JSON.stringify({ success: true, data: { openid: info.openid, token: "aaa" } }), {
+    // console.log("登录成功",info.openid,info.session_key);
+    return new Response(JSON.stringify({ success: true, data: { openid: info.openid, token: info.session_key } }), {
         headers: {
             'content-type': 'application/json',
             'x-edgeon-time': Date.now(),
